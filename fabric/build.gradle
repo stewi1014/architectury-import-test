@@ -32,6 +32,15 @@ dependencies {
 
     common(project(path: ':common', configuration: 'namedElements')) { transitive false }
     shadowBundle project(path: ':common', configuration: 'transformProductionFabric')
+
+    implementation("org.eclipse.jgit:org.eclipse.jgit:6.10.0.202406032230-r")
+    shadowBundle("org.eclipse.jgit:org.eclipse.jgit:6.10.0.202406032230-r")
+
+    implementation("org.apache.sshd:sshd-core:2.14.0")
+    shadowBundle("org.apache.sshd:sshd-core:2.14.0")
+
+    implementation("org.apache.sshd:sshd-common:2.14.0")
+    shadowBundle("org.apache.sshd:sshd-common:2.14.0")
 }
 
 processResources {
